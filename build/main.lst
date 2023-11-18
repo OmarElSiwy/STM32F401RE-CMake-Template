@@ -1,0 +1,113 @@
+ARM GAS  /tmp/ccCPkz2b.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Core/Src/main.c"
+  20              		.section	.text.main,"ax",%progbits
+  21              		.align	1
+  22              		.global	main
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	main:
+  28              	.LFB130:
+   1:Core/Src/main.c **** /* USER CODE BEGIN Header */
+   2:Core/Src/main.c **** /**
+   3:Core/Src/main.c ****   ******************************************************************************
+   4:Core/Src/main.c ****   * @file           : main.c
+   5:Core/Src/main.c ****   * @brief          : Main program body
+   6:Core/Src/main.c ****   ******************************************************************************
+   7:Core/Src/main.c ****   * @attention
+   8:Core/Src/main.c ****   *
+   9:Core/Src/main.c ****   * Copyright (c) 2023 STMicroelectronics.
+  10:Core/Src/main.c ****   * All rights reserved.
+  11:Core/Src/main.c ****   *
+  12:Core/Src/main.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  13:Core/Src/main.c ****   * in the root directory of this software component.
+  14:Core/Src/main.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  15:Core/Src/main.c ****   *
+  16:Core/Src/main.c ****   ******************************************************************************
+  17:Core/Src/main.c ****   */
+  18:Core/Src/main.c **** 
+  19:Core/Src/main.c **** #include "main.h"
+  20:Core/Src/main.c **** #include "usart.h"
+  21:Core/Src/main.c **** #include "gpio.h"
+  22:Core/Src/main.c **** 
+  23:Core/Src/main.c **** /**
+  24:Core/Src/main.c ****   * @brief  The application entry point.
+  25:Core/Src/main.c ****   * @retval int
+  26:Core/Src/main.c ****   */
+  27:Core/Src/main.c **** int main(void)
+  28:Core/Src/main.c **** {
+  29              		.loc 1 28 1 view -0
+  30              		.cfi_startproc
+ARM GAS  /tmp/ccCPkz2b.s 			page 2
+
+
+  31              		@ Volatile: function does not return.
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34 0000 08B5     		push	{r3, lr}
+  35              	.LCFI0:
+  36              		.cfi_def_cfa_offset 8
+  37              		.cfi_offset 3, -8
+  38              		.cfi_offset 14, -4
+  29:Core/Src/main.c ****   HAL_Init();
+  39              		.loc 1 29 3 view .LVU1
+  40 0002 FFF7FEFF 		bl	HAL_Init
+  41              	.LVL0:
+  42              	.L2:
+  30:Core/Src/main.c ****   /*
+  31:Core/Src/main.c ****   RCC_AHB1PeriphClocked(RCC_AHB1Periph_GPIOD, Enable);
+  32:Core/Src/main.c ****   GPIO_InitTypeDef structs = {
+  33:Core/Src/main.c ****     .Pin = GPIO_PIN_12,
+  34:Core/Src/main.c ****     .Mode = GPIO_MODE_OUTPUT_PP,
+  35:Core/Src/main.c ****     .Speed = GPIO_SPEED_FREQ_LOW,
+  36:Core/Src/main.c ****     .Pull = GPIO_NOPULL
+  37:Core/Src/main.c ****   };
+  38:Core/Src/main.c ****   GPIO_Init(GPIOD, &structs);
+  39:Core/Src/main.c ****   */
+  40:Core/Src/main.c ****   while (1)
+  43              		.loc 1 40 3 view .LVU2
+  41:Core/Src/main.c ****   {
+  42:Core/Src/main.c ****     // GPIO_SetBits(GPIOD, GPIO_PIN_12); // Turns on
+  43:Core/Src/main.c **** 
+  44:Core/Src/main.c ****     // GPIO_ResetBits(GPIOD, GPIO_PIN_12); // Turns off
+  45:Core/Src/main.c ****   }
+  44              		.loc 1 45 3 view .LVU3
+  40:Core/Src/main.c ****   {
+  45              		.loc 1 40 9 view .LVU4
+  46 0006 FEE7     		b	.L2
+  47              		.cfi_endproc
+  48              	.LFE130:
+  50              		.text
+  51              	.Letext0:
+  52              		.file 2 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+  53              		.file 3 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ARM GAS  /tmp/ccCPkz2b.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+     /tmp/ccCPkz2b.s:21     .text.main:00000000 $t
+     /tmp/ccCPkz2b.s:27     .text.main:00000000 main
+
+UNDEFINED SYMBOLS
+HAL_Init
