@@ -31,3 +31,15 @@ After building the image, start a container:
    ```bash
    docker run -it stm32-dev-env
    ```
+
+4. **Build Project**
+
+   ```bash
+   make
+   ```
+
+6. **Flash STM32**
+
+   ```bash
+   make burn
+   ```
