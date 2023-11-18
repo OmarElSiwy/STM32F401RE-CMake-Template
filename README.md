@@ -5,7 +5,7 @@ This repository contains a Docker setup for developing applications for STM32F4 
 ## Prerequisites
 
 - Docker
-- Git (for cloning this repository)
+- Git 
 
 ## Installation
 
