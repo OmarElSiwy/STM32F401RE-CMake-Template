@@ -189,10 +189,10 @@ clean:
 ########################################
 # Flash 
 ########################################
-flash: proj
+flash:
 	/usr/sbin/st-flash write $(BUILD_DIR)/$(PROJ_NAME).bin 0x8000000
-erase: proj
-	/usr/sbin/st-flash write $(BUILD_DIR)/$(PROJ_NAME).bin 0x8000000
+erase: 
+	
 #######################################
 # dependencies
 #######################################

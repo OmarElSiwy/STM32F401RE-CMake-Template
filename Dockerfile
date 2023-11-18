@@ -9,7 +9,7 @@ RUN pacman -Syu --noconfirm \
       arm-none-eabi-newlib \
       stlink \
       unzip \
-      python
+      python 
 
 # Makes Directory and goes into it
 RUN mkdir -p /Workspace
