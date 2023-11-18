@@ -21,9 +21,7 @@ This repository contains a Docker setup for developing applications for STM32F4 
 Run the following command to build the Docker image:
 
    ```bash
-   Copy code
    docker build -t stm32-dev-env .
-   This command creates a Docker image named stm32-dev-env based on the Dockerfile in the repository.
    ```
 
 3. **Run the Docker Container**
@@ -31,7 +29,5 @@ Run the following command to build the Docker image:
 After building the image, start a container:
 
    ```bash
-   Copy code
    docker run -it stm32-dev-env
-   This command runs the container in interactive mode with a bash shell.
    ```
