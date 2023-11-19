@@ -7,9 +7,10 @@ RUN pacman -Syu --noconfirm \
       git \
       arm-none-eabi-gcc \
       arm-none-eabi-newlib \
-      stlink \
       unzip \
-      python 
+      python \
+      make
+      #stlink
 
 # Makes Directory and goes into it
 RUN mkdir -p /Workspace

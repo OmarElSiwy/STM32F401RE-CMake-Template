@@ -13,8 +13,8 @@ def main():
     print("GCC ARM Version:\n", gcc_version)
 
     # Test ST-Link version
-    stlink_version = run_command("st-info --version")
-    print("ST-Link Version:\n", stlink_version)
+    #stlink_version = run_command("st-info --version")
+    #print("ST-Link Version:\n", stlink_version)
 
 if __name__ == "__main__":
     main()
